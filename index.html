@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe Raul Quintella de Jiu-jitsu | Petrópolis - RJ</title>
+    <meta name="description" content="Treine Jiu-Jitsu com a Equipe Raul Quintella em Petrópolis. Aulas para iniciantes, adultos e crianças. Disciplina, respeito e evolução.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+        
+        .bg-primary { background-color: #D20A11; }
+        .text-primary { color: #D20A11; }
+        .border-primary { border-color: #D20A11; }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+
+        /* Overlay para o Banner */
+        .hero-overlay {
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Header / Navegação -->
+    <nav class="fixed w-full z-50 bg-black text-white py-4 px-6 flex justify-between items-center border-b border-red-600">
+        <div class="text-xl font-bold tracking-tighter uppercase">
+            Equipe <span class="text-primary">Raul Quintella</span>
+        </div>
+        <!-- Menu Desktop (As abas funcionam através dos IDs #sobre, #aulas, etc) -->
+        <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest">
+            <a href="#home" class="hover:text-primary transition">Home</a>
+            <a href="#sobre" class="hover:text-primary transition">Sobre</a>
+            <a href="#aulas" class="hover:text-primary transition">Aulas</a>
+            <a href="#galeria" class="hover:text-primary transition">Galeria</a>
+            <a href="#contato" class="hover:text-primary transition">Contato</a>
+        </div>
+        <!-- Botão Mobile -->
+        <button class="md:hidden text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Menu Mobile (Escondido por padrão) -->
+    <div id="mobile-menu" class="hidden fixed w-full bg-black text-white z-40 top-[60px] p-6 flex flex-col space-y-4 md:hidden border-b border-red-600">
+        <a href="#home" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+        <a href="#sobre" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Sobre</a>
+        <a href="#aulas" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Aulas</a>
+        <a href="#galeria" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Galeria</a>
+        <a href="#contato" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contato</a>
+    </div>
+
+    <!-- 1. Home / Hero -->
+    <section id="home" class="h-screen relative flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0 z-0">
+            <img src="hero.jpg" class="w-full h-full object-cover" alt="Banner Jiu-Jitsu">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <div class="relative z-10 px-4" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-5xl md:text-8xl font-bold mb-4 drop-shadow-2xl">Equipe Raul Quintella</h1>
+            <p class="text-xl md:text-2xl mb-8 tracking-[0.3em] text-gray-200">DISCIPLINA • RESPEITO • EVOLUÇÃO</p>
+            <a href="https://wa.me/5524988091899" target="_blank" class="bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest transition-all transform hover:scale-105 inline-block">
+                Agende uma aula experimental
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. Sobre a Equipe -->
+    <section id="sobre" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <!-- Foto do Professor Raul com graduados (foto2.jpg) -->
+                <img src="foto2.jpg" alt="Professor Raul Quintella" class="rounded shadow-2xl border-l-8 border-primary">
+            </div>
+            <div data-aos="fade-left">
+                <h2 class="text-4xl font-bold mb-6 italic">Nossa <span class="text-primary">História</span></h2>
+                <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                    A Equipe Raul Quintella de Jiu-Jitsu é um centro de excelência em artes marciais em Petrópolis. Nossa missão é proporcionar um ambiente onde o aluno evolua não apenas tecnicamente, mas também como cidadão.
+                </p>
+                <div class="grid grid-cols-3 gap-4 mb-8 text-center">
+                    <div class="bg-gray-100 p-4 rounded border-b-4 border-primary">
+                        <h4 class="font-bold text-lg italic">OSS</h4>
+                        <p class="text-xs text-gray-500 uppercase">Respeito</p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded border-b-4 border-primary">
+                        <h4 class="font-bold text-lg italic">Foco</h4>
+                        <p class="text-xs text-gray-500 uppercase">Disciplina</p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded border-b-4 border-primary">
+                        <h4 class="font-bold text-lg italic">União</h4>
+                        <p class="text-xs text-gray-500 uppercase">Família</p>
+                    </div>
+                </div>
+                <p class="font-bold text-xl italic text-gray-800">"O Jiu-Jitsu é para todos. A evolução é individual."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Aulas -->
+    <section id="aulas" class="py-24 bg-gray-100 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-down">Nossas <span class="text-primary">Aulas</span></h2>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-lg shadow hover:bg-black hover:text-white transition duration-300 border-b-4 border-primary text-center" data-aos="zoom-in">
+                    <i class="fas fa-child text-3xl mb-4 text-primary"></i>
+                    <h3 class="text-xl font-bold mb-2 uppercase">Infantil</h3>
+                    <p class="text-sm opacity-80 italic">Formando campeões desde cedo.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow hover:bg-black hover:text-white transition duration-300 border-b-4 border-primary text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-users text-3xl mb-4 text-primary"></i>
+                    <h3 class="text-xl font-bold mb-2 uppercase">Adulto</h3>
+                    <p class="text-sm opacity-80 italic">Saúde, defesa pessoal e técnica.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow hover:bg-black hover:text-white transition duration-300 border-b-4 border-primary text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-graduation-cap text-3xl mb-4 text-primary"></i>
+                    <h3 class="text-xl font-bold mb-2 uppercase">Iniciante</h3>
+                    <p class="text-sm opacity-80 italic">A base de tudo começa aqui.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow hover:bg-black hover:text-white transition duration-300 border-b-4 border-primary text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-trophy text-3xl mb-4 text-primary"></i>
+                    <h3 class="text-xl font-bold mb-2 uppercase">Avançado</h3>
+                    <p class="text-sm opacity-80 italic">Preparação para competições.</p>
+                </div>
+            </div>
+
+            <!-- Horários -->
+            <div class="mt-20 overflow-x-auto shadow-2xl rounded-lg" data-aos="fade-up">
+                <table class="w-full text-left bg-white">
+                    <thead class="bg-black text-white uppercase text-sm">
+                        <tr>
+                            <th class="p-5">Horário</th>
+                            <th class="p-5">Segunda / Quarta / Sexta</th>
+                            <th class="p-5">Terça / Quinta</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y font-medium">
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="p-5 font-bold">18:00</td>
+                            <td class="p-5 italic">Jiu-Jitsu Kids</td>
+                            <td class="p-5 italic text-primary">Jiu-Jitsu Kids</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="p-5 font-bold">19:30</td>
+                            <td class="p-5 italic text-primary">Adulto Geral</td>
+                            <td class="p-5 italic">Iniciantes</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="p-5 font-bold">20:30</td>
+                            <td class="p-5 italic">Treino Livre / Sparring</td>
+                            <td class="p-5 italic text-primary">No-Gi (Sem Kimono)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Galeria (Com suas fotos reais) -->
+    <section id="galeria" class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 uppercase tracking-tighter" data-aos="fade-up">Nossa <span class="text-primary">Galeria</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="foto1.jpg" class="w-full h-64 object-cover rounded hover:opacity-80 transition cursor-pointer shadow-lg" data-aos="zoom-in">
+                <img src="foto5.jpg" class="w-full h-64 object-cover rounded hover:opacity-80 transition cursor-pointer shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+                <img src="foto4.jpg" class="w-full h-64 object-cover rounded hover:opacity-80 transition cursor-pointer shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+                <img src="foto6.jpg" class="w-full h-64 object-cover rounded hover:opacity-80 transition cursor-pointer shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+                <img src="foto2.jpg" class="w-full h-64 object-cover rounded hover:opacity-80 transition cursor-pointer shadow-lg" data-aos="zoom-in">
+                <img src="foto7.jpg" class="w-full h-64 object-cover rounded hover:opacity-80 transition cursor-pointer shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+                <img src="foto3.jpg" class="w-full h-64 object-cover rounded hover:opacity-80 transition cursor-pointer shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+                <img src="hero.jpg" class="w-full h-64 object-cover rounded hover:opacity-80 transition cursor-pointer shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Contato -->
+    <section id="contato" class="py-24 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-bold mb-8 italic text-white">Entre em <span class="text-primary">Contato</span></h2>
+                <ul class="space-y-6 text-gray-300">
+                    <li class="flex items-center gap-4">
+                        <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                        <span>Rua Paulo Rudge 75, Petrópolis, RJ, 25716-132</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <i class="fas fa-phone text-primary text-xl"></i>
+                        <span>(24) 98809-1899</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <i class="fab fa-facebook text-primary text-xl"></i>
+                        <span>Equipe Raul Quintella Jiu-Jitsu</span>
+                    </li>
+                </ul>
+
+                <!-- Google Maps -->
+                <div class="mt-10 h-64 w-full rounded-lg overflow-hidden border-2 border-primary grayscale hover:grayscale-0 transition duration-500">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3688.1257460528657!2d-43.1678125!3d-22.4243125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9900222f676443%3A0x6b896947690623d5!2sR.%20Paulo%20Rudge%2C%2075%20-%20Petr%C3%B3polis%2C%20RJ%2C%2025716-132!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div data-aos="fade-left" class="bg-white text-black p-8 rounded-lg">
+                <h3 class="text-2xl font-bold mb-6 uppercase">Mande uma Mensagem</h3>
+                <form action="#" class="space-y-4">
+                    <input type="text" class="w-full border-b-2 border-gray-300 focus:border-primary outline-none p-3" placeholder="Seu Nome">
+                    <input type="email" class="w-full border-b-2 border-gray-300 focus:border-primary outline-none p-3" placeholder="Seu E-mail">
+                    <textarea class="w-full border-b-2 border-gray-300 focus:border-primary outline-none p-3" rows="4" placeholder="Sua Mensagem"></textarea>
+                    <button type="submit" class="w-full bg-primary text-white font-bold py-4 uppercase hover:bg-red-800 transition shadow-lg">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-500 py-10 text-center border-t border-gray-900">
+        <p class="font-bold text-white uppercase tracking-widest">Equipe Raul Quintella de Jiu-jitsu</p>
+        <p class="text-xs mt-2 italic">Petrópolis - Rio de Janeiro</p>
+    </footer>
+
+    <!-- Botão WhatsApp Fixo -->
+    <a href="https://wa.me/5524988091899" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializa animações ao rolar
+        AOS.init({ duration: 800, once: true });
+
+        // Script para garantir que o scroll suave funcione em todos os navegadores
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
